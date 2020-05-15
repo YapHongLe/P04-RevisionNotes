@@ -115,13 +115,4 @@ public class DBHelper extends SQLiteOpenHelper {
 		return notes;
 	}
 
-	public Cursor getAllDataForList(){
-		SQLiteDatabase db = this.getWritableDatabase();
-		String selectQuery = "SELECT " + COLUMN_ID + ","
-				+ COLUMN_CONTENT + " , "
-				+ COLUMN_STARS
-				+ " FROM " + TABLE_NOTE;
-		Cursor result = db.rawQuery(selectQuery, null);
-		return result;
-	}
 }
